@@ -1,22 +1,22 @@
 import { Cliente } from "./Cliente.js";
 import { ContaCorrente } from "./ContaCorrente.js";
 
-/*const cliente1 = new Cliente();
+const cliente1 = new Cliente();
 cliente1.nome = "Ale";
-cliente1.cpf = 123456789;*/
+cliente1.cpf = 123456789;
 
 const conta_Ale = new ContaCorrente();
-conta_Ale.cliente = new Cliente();
-conta_Ale.cliente.nome = "Ale";
-conta_Ale.cliente.cpf = 123456789
+conta_Ale.cliente = cliente1
 conta_Ale.agencia = 1001;
 conta_Ale._saldo = 0;
 
 
+const cliente2 = new Cliente();
+cliente2.nome = "Nessa";
+cliente2.cpf = 123456781;
+
 const conta_Nessa = new ContaCorrente();
-conta_Nessa.cliente = new Cliente()
-conta_Nessa.cliente.nome = "Nessa";
-conta_Nessa.cliente.cpf = 123456781;
+conta_Nessa.cliente = cliente2
 conta_Nessa.agencia = 1002;
 conta_Nessa._saldo = 0;
 
@@ -39,6 +39,7 @@ console.log(conta_Ale);
 
 console.log(conta_Nessa);
 
+console.log(conta_Ale.saldo);
 
 
 
